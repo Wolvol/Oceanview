@@ -259,6 +259,7 @@
     		ctx.lineTo(iso3[0],iso3[1]);
    			ctx.fill();
 		}
+
 		function redraw()
 		{
 
@@ -333,9 +334,6 @@
 				//console.log("\n");
 			}
 			
-			console.log(totalheight);
-			//TODO Have the velocities of columns bleed together somehow
-
 			//calculate the acceleration for each water column and add it to velocity
 
 			var accel = 0; 
@@ -418,8 +416,6 @@
 				}
 			}
 			
-			
-			
 			//Subtract vel from water height
 			for(var i = 0; i < size; i++)
 			{
@@ -428,7 +424,6 @@
 					pond[i][j].height -= pond[i][j].vel*0.3;
 				}
 			}
-
 			redraw();
 		}
 		
